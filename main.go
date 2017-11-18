@@ -2,6 +2,8 @@ package main
 
 import (
 	"github.com/aerogo/aero"
+	"github.com/aerogo/layout"
+	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/layout"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/home"
 )
 
@@ -11,7 +13,9 @@ func main() {
 }
 
 func configure(app *aero.Application) *aero.Application {
-	app.Get("/", home.Get)
+	l := layout.New(app)
+	l.Render = fullpage.Render
+	l.Page("/", home.Get)
 
 	return app
 }

@@ -1,0 +1,7 @@
+component Layout(app *aero.Application, content string)
+	html
+		head
+			title= app.Config.Title
+		
+		body
+			main#content.fade!= content
