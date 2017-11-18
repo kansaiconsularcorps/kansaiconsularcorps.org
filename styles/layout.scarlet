@@ -1,0 +1,8 @@
+body
+	vertical
+
+#navigation
+	horizontal
+
+#content
+	vertical

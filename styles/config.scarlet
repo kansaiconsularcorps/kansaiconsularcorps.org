@@ -1,0 +1,4 @@
+text-color = hsl(0, 0%, 12%)
+bg-color = hsl(0, 0%, 96%)
+primary-color = hsl(0, 50%, 50%)
+content-padding = 1rem

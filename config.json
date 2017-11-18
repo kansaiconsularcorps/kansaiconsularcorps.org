@@ -5,8 +5,11 @@
 		"Lato"
 	],
 	"styles": [
+		"config",
 		"reset",
-		"flexbox"
+		"flexbox",
+		"base",
+		"layout"
 	],
 	"scripts": {
 		"main": "main"
