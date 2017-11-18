@@ -9,7 +9,8 @@
 		"reset",
 		"flexbox",
 		"base",
-		"layout"
+		"layout",
+		"typography"
 	],
 	"scripts": {
 		"main": "main"

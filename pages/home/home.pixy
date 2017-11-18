@@ -1,2 +1,12 @@
-component Home
-	h1 Heya
+component Home(stories []*model.Story)
+	h1 Stories
+
+	.stories
+		each story in stories
+			Story(story)
+
+component Story(story *model.Story)
+	.story
+		h2.story-title= story.Title
+		img(alt=story.Title, src=story.Image)
+		.story-summary!= markdown.Render(story.Summary)

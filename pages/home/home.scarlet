@@ -1,0 +1,14 @@
+.stories
+	horizontal-wrap
+	justify-content space-around
+
+.story
+	vertical
+	padding default-padding
+	max-width 350px
+
+.story-title
+	padding default-padding 0
+
+.story-summary
+	padding default-padding 0
