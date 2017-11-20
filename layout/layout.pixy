@@ -8,13 +8,15 @@ component Layout(app *aero.Application, pages []*model.Page, content string)
 			#container
 				nav#navigation
 					a.ajax(href="/") Home
-					a.ajax(href="/japanese") 日本語
+					//- a.ajax(href="/japanese") 日本語
 
 					each page in pages
 						a.ajax(href="/" + page.ID)= page.Title["en"]
 					
 					a.ajax(href="/gallery") Gallery
 					a.ajax(href="/contact") Contact
+					.spacer
+					a.ajax(href="/login") Sign in
 				
 				#content-container
 					main#content.fade!= content

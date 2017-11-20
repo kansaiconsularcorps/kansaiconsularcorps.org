@@ -5,6 +5,7 @@
 .story
 	vertical
 	padding default-padding
+	padding-top 0
 	max-width 350px
 
 .story-title

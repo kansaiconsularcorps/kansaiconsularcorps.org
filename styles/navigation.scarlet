@@ -1,19 +1,28 @@
 #navigation
 	background white
-	border 1px solid rgba(0, 0, 0, 0.1)
+	border-bottom 1px solid rgba(0, 0, 0, 0.1)
 	border-top none
 	justify-content center
+	padding 0 1rem
 	
 	a
 		padding default-padding
+		// border-left 1px solid rgba(0, 0, 0, 0.1)
 		default-transition
 
+		// :last-child
+		// 	border-right 1px solid rgba(0, 0, 0, 0.1)
+
+		:hover
+			background hsl(0, 0%, 96%)
+
 		&.active
-			font-weight bold
+			background primary-color
+			color white
 
 		:active
 			transform translateY(3px)
 
-// > 800px
-// 	#navigation
-// 		justify-content flex-start
+> 800px
+	#navigation
+		justify-content flex-start

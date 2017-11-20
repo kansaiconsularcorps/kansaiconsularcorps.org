@@ -4,7 +4,8 @@ content-bg-color = hsl(0, 0%, 96%)
 primary-color = hsl(0, 50%, 50%)
 default-padding = 1rem
 content-padding = 1.5rem
-fade-speed = 350ms
+transition-speed = 250ms
+fade-speed = 400ms
 
 mixin default-transition
-	transition all fade-speed ease
+	transition all transition-speed ease
