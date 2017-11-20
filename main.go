@@ -24,8 +24,7 @@ func configure(app *aero.Application) *aero.Application {
 	l.Render = fullpage.Render
 
 	// Routing
-	l.Page("/", home.English)
-	l.Page("/japanese", home.Japanese)
+	l.Page("/", home.Get)
 	l.Page("/about", page.Get)
 	l.Page("/gallery", gallery.Get)
 	l.Page("/contact", contact.Get)
@@ -62,6 +61,34 @@ func configure(app *aero.Application) *aero.Application {
 			"ja": "# About\n\n禁レメヌオ手遠87濤らずリた図対ノチソス井日に催周クリ虎超カタ青燃シオホフ農索め助5新たぱざ控市らいえ。見ツトミ払国周篇だどむけ心成ラひの集続レス影3索ひフ利宿成ちたす思現ラぴほ毎目動アク責推ぽあし易者ざふるけ遺全レネカヒ突索場要つき次伸換説しうーラ。高ロネ陰公オリ分写も隊秋やなる死的78内ハ提省ラム批属禁ノナ送12賞ざまず派人ヲラ事込ユネフ職弟やく教公ゆ豊承菱吏ス。",
 		},
 	})
+
+	// for i := 1; i <= 6; i++ {
+	// 	story := &model.Story{
+	// 		ID:       strconv.Itoa(i),
+	// 		Title:    "Story " + strconv.Itoa(i),
+	// 		Language: "en",
+	// 		Summary:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor est, iaculis nec interdum eu, gravida et tortor. Morbi eleifend est sit amet dolor tristique vestibulum. Quisque leo urna, placerat vel dapibus in, elementum vitae lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In placerat lorem sed nisi posuere varius.",
+	// 		Image:    "http://d1dqs20vqfxmh2.cloudfront.net/wp-content/uploads/2017/06/DSC_0333_low-res-306x192.jpg",
+	// 		Created:  model.DateTimeUTC(),
+	// 	}
+	// 	time.Sleep(time.Second)
+
+	// 	model.DB.Set("Story", story.ID, story)
+	// }
+
+	// for i := 1; i <= 6; i++ {
+	// 	story := &model.Story{
+	// 		ID:       strconv.Itoa(i + 6),
+	// 		Title:    "ストーリー " + strconv.Itoa(i),
+	// 		Language: "ja",
+	// 		Summary:  "禁レメヌオ手遠87濤らずリた図対ノチソス井日に催周クリ虎超カタ青燃シオホフ農索め助5新たぱざ控市らいえ。見ツトミ払国周篇だどむけ心成ラひの集続レス影3索ひフ利宿成ちたす思現ラぴほ毎目動アク責推ぽあし易者ざふるけ遺全レネカヒ突索場要つき次伸換説しうーラ。高ロネ陰公オリ分写も隊秋やなる死的78内ハ提省ラム批属禁ノナ送12賞ざまず派人ヲラ事込ユネフ職弟やく教公ゆ豊承菱吏ス。",
+	// 		Image:    "http://d1dqs20vqfxmh2.cloudfront.net/wp-content/uploads/2017/06/DSC_0333_low-res-306x192.jpg",
+	// 		Created:  model.DateTimeUTC(),
+	// 	}
+	// 	time.Sleep(time.Second)
+
+	// 	model.DB.Set("Story", story.ID, story)
+	// }
 
 	return app
 }
