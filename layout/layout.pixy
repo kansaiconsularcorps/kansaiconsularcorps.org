@@ -6,18 +6,12 @@ component Layout(app *aero.Application, pages []*model.Page, content string)
 		
 		body
 			#container
-				nav#navigation
-					a.ajax(href="/") Home
-					//- a.ajax(href="/japanese") 日本語
-
-					each page in pages
-						a.ajax(href="/" + page.ID)= page.Title["en"]
-					
-					a.ajax(href="/gallery") Gallery
-					a.ajax(href="/contact") Contact
-					.spacer
-					a.ajax(href="/login") Sign in
+				Navigation(pages)
 				
 				#content-container
 					main#content.fade!= content
+				
+				#footer
+					Footer
+				
 				script(src="/scripts")
