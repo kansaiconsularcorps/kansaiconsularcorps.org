@@ -1,5 +1,6 @@
 .gallery
 	horizontal-wrap
+	justify-content space-around
 
 .gallery-image
 	flex-basis 300px
