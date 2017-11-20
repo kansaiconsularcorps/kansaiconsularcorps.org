@@ -23,7 +23,8 @@ func configure(app *aero.Application) *aero.Application {
 	l.Render = fullpage.Render
 
 	// Routing
-	l.Page("/", home.Get)
+	l.Page("/", home.English)
+	l.Page("/japanese", home.Japanese)
 	l.Page("/about", about.Get)
 	l.Page("/gallery", gallery.Get)
 	l.Page("/contact", contact.Get)

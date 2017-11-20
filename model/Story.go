@@ -7,6 +7,7 @@ type Story struct {
 	Summary   string
 	Text      string
 	Image     string
+	Language  string
 	Created   string
 	CreatedBy string
 }

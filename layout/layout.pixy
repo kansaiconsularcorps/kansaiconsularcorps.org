@@ -7,6 +7,7 @@ component Layout(app *aero.Application, content string)
 		body
 			nav#navigation
 				a.ajax(href="/") Home
+				a.ajax(href="/japanese") 日本語
 				a.ajax(href="/about") About
 				a.ajax(href="/gallery") Gallery
 				a.ajax(href="/contact") Contact
