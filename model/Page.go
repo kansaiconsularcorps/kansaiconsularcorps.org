@@ -4,6 +4,7 @@ package model
 type Page struct {
 	ID string
 
-	// Key is the ISO 639-3 language code, value is the text translation in markdown
-	Text map[string]string
+	// Key is the ISO 639-1 language code, value is the text translation in markdown
+	Title map[string]string
+	Text  map[string]string
 }

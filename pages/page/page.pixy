@@ -1,0 +1,2 @@
+component Page(text string)
+	div!= markdown.Render(text)

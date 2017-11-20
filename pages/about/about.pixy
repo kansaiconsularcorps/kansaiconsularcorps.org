@@ -1,2 +1,0 @@
-component About(text string)
-	div!= markdown.Render(text)
