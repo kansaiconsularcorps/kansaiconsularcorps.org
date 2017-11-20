@@ -1,11 +1,19 @@
 #navigation
 	background white
-	border-bottom 1px solid rgba(0, 0, 0, 0.1)
+	border 1px solid rgba(0, 0, 0, 0.1)
+	border-top none
 	justify-content center
 	
 	a
 		padding default-padding
+		default-transition
 
-> 800px
-	#navigation
-		justify-content flex-start
+		&.active
+			font-weight bold
+
+		:active
+			transform translateY(3px)
+
+// > 800px
+// 	#navigation
+// 		justify-content flex-start

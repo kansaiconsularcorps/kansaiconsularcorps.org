@@ -5,15 +5,17 @@ component Layout(app *aero.Application, pages []*model.Page, content string)
 			meta(name="viewport", content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
 		
 		body
-			nav#navigation
-				a.ajax(href="/") Home
-				a.ajax(href="/japanese") 日本語
+			#container
+				nav#navigation
+					a.ajax(href="/") Home
+					a.ajax(href="/japanese") 日本語
 
-				each page in pages
-					a.ajax(href="/" + page.ID)= page.Title["en"]
+					each page in pages
+						a.ajax(href="/" + page.ID)= page.Title["en"]
+					
+					a.ajax(href="/gallery") Gallery
+					a.ajax(href="/contact") Contact
 				
-				a.ajax(href="/gallery") Gallery
-				a.ajax(href="/contact") Contact
-			
-			main#content.fade!= content
-			script(src="/scripts")
+				#content-container
+					main#content.fade!= content
+				script(src="/scripts")

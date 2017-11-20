@@ -5,6 +5,7 @@
 		"moduleResolution": "node",
 		"baseUrl": ".",
 		"strict": true,
+		"strictNullChecks": true,
 		"strictFunctionTypes": true
 	},
 	"compileOnSave": true,

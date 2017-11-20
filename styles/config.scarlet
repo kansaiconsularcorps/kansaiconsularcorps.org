@@ -1,5 +1,10 @@
 text-color = hsl(0, 0%, 12%)
-bg-color = hsl(0, 0%, 96%)
+bg-color = hsl(0, 0%, 82%)
+content-bg-color = hsl(0, 0%, 96%)
 primary-color = hsl(0, 50%, 50%)
 default-padding = 1rem
 content-padding = 1.5rem
+fade-speed = 350ms
+
+mixin default-transition
+	transition all fade-speed ease
