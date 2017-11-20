@@ -12,7 +12,7 @@ import (
 func English(ctx *aero.Context) string {
 	stories := []*model.Story{}
 
-	for i := 1; i <= 9; i++ {
+	for i := 1; i <= 6; i++ {
 		stories = append(stories, &model.Story{
 			Title:    "Story " + strconv.Itoa(i),
 			Language: "en",
@@ -28,7 +28,7 @@ func English(ctx *aero.Context) string {
 func Japanese(ctx *aero.Context) string {
 	stories := []*model.Story{}
 
-	for i := 1; i <= 9; i++ {
+	for i := 1; i <= 6; i++ {
 		stories = append(stories, &model.Story{
 			Title:    "ストーリー " + strconv.Itoa(i),
 			Language: "ja",

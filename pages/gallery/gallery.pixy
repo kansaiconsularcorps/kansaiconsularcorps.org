@@ -1,2 +1,7 @@
-component Gallery
+component Gallery(images []string)
 	h1 Gallery
+
+	.gallery
+		each image in images
+			a.gallery-image(href=image, target="_blank")
+				img(src=image, alt="Gallery image")

@@ -40,6 +40,10 @@ func configure(app *aero.Application) *aero.Application {
 		return ctx.JavaScript(scripts)
 	})
 
+	app.Get("/images/*file", func(ctx *aero.Context) string {
+		return ctx.File("images" + ctx.Get("file"))
+	})
+
 	model.DB.Prefetch()
 
 	app.OnShutdown(func() {
