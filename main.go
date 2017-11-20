@@ -6,6 +6,7 @@ import (
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/components/css"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/components/js"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/layout"
+	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/model"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/about"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/contact"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/gallery"
@@ -37,6 +38,12 @@ func configure(app *aero.Application) *aero.Application {
 
 	app.Get("/scripts", func(ctx *aero.Context) string {
 		return ctx.JavaScript(scripts)
+	})
+
+	model.DB.Prefetch()
+
+	app.OnShutdown(func() {
+		model.DB.Close()
 	})
 
 	return app

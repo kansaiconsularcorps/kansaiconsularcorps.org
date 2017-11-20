@@ -1,2 +1,2 @@
-component About
-	h1 About
+component About(text string)
+	div!= markdown.Render(text)
