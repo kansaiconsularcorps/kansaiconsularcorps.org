@@ -22,5 +22,5 @@ func Get(ctx *aero.Context) string {
 
 	page := pageObj.(*model.Page)
 
-	return ctx.HTML(components.Page(page.Text["eng"]))
+	return ctx.HTML(components.Page(page.Text["en"]))
 }
