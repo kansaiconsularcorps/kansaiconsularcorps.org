@@ -24,7 +24,7 @@
 		"lang": "en"
 	},
 	"ports": {
-		"http": 4000,
-		"https": 4001
+		"http": 4100,
+		"https": 4101
 	}
 }
