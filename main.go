@@ -10,6 +10,7 @@ import (
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/contact"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/gallery"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/home"
+	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/login"
 	"github.com/kansaiconsularcorps/kansaiconsularcorps.org/pages/page"
 )
 
@@ -28,6 +29,7 @@ func configure(app *aero.Application) *aero.Application {
 	l.Page("/about", page.Get)
 	l.Page("/gallery", gallery.Get)
 	l.Page("/contact", contact.Get)
+	l.Page("/login", login.Get)
 
 	// Styles
 	app.SetStyle(css.Bundle())
